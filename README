@@ -1,0 +1,21 @@
+
+#clone 项目
+git clone https://github.com/alphariver/django_blog
+
+#在项目中新建虚拟环境（只需要创建一次，后续运行该项目不需要重复创建）
+python -m venv .venv
+
+#激活虚拟环境
+.venv\Scripts\activate
+
+#安装第三方依赖包
+pip install -r requirements.txt  -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+#数据库迁移
+python manage.py migrate
+
+#创建管理员用户
+python manage.py createsuperuser
+
+#运行服务器
+python manage.py runserver
